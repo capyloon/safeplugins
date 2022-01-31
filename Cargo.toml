@@ -1,0 +1,25 @@
+[package]
+authors = ["Fabrice Desré <fabrice@desre.org>"]
+edition = "2021"
+license = "AGPL-3.0-only"
+name = "safeplugins"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+
+[dependencies]
+wee_alloc = {version = "0.4.5"}
+wit-bindgen-rust = {git = "https://github.com/bytecodealliance/wit-bindgen.git"}
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+lto = true
+opt-level = "z"
+panic = "abort"
+rpath = false
