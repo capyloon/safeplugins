@@ -8,10 +8,10 @@ record algorithm-description {
 
 // Return the list of supported algorithms.
 // The descriptions should be localized according to the locale parameter value.
-algorithms: function(locale: string) -> list<algorithm-description>
+algorithms: func(locale: string) -> list<algorithm-description>
 
 // Applies some algorithm to an image and return the transformed image when successful.
 // @param image: rgba
 // @param width: the image width
 // @param height: the image height
-process-image: function(algorithm: string, image: list<u8>, width: u32, height: u32) -> option<list<u8>>
+process-image: func(algorithm: string, image: list<u8>, width: u32, height: u32) -> option<list<u8>>

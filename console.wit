@@ -1,5 +1,5 @@
 // console.* bindings.
 
-console-log: function(msg: string)
+console-log: func(msg: string)
 
-console-error: function(msg: string)
+console-error: func(msg: string)
